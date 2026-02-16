@@ -1,0 +1,16 @@
+name: First pipeline
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+      Example_Jobs:
+         runs-on: ubuntu-latest
+
+         steps:
+           - name: print message 
+             run: echo "welcome mahmoud selim!"
+  
+  
