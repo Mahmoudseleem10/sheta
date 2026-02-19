@@ -18,5 +18,6 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Run tests
-        run: npm test
-      
+        run: run: |
+          chmod +x test.sh
+          npm test
