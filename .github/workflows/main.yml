@@ -1,20 +1,21 @@
+name: First pipeline
+
 on:
   push:
     branches:
-        -main
-        -"release/**" 
-    paths:
-        - "src/**"
-  pull_request:
-      branches:
-          -main
-          -"release/**"     
-jobs:
-    test:
-        runs-on:ubuntu-latest
-        steps:
-        - name: checkout code
-          uses: actions/checkout@v6
+      - main
 
-        - name: Run tests
-          run: npm test
+jobs:
+      Example_Jobs:
+         runs-on: ubuntu-latest
+
+         steps:
+           - name: print message 
+             run: echo "welcome mahmoud selim!"
+
+           - name: Check repository
+             uses: actions/checkout@v6.0.2
+
+           - name: list repository files
+             run: ls -la
+           
